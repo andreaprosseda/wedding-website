@@ -26,9 +26,11 @@
 	border-color: $txt-light;
 }
 .btn-white:hover, .btn-white:focus {
-	color: $accent-color;
-	border-color: $accent-color;
+	color: transparent;
+	background-color: $white-color;
+	border-color: $white-color;
 }
+
 .btn-fill {
 	color: $white-color;
 	border: solid 2px $accent-color;

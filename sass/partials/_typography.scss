@@ -2,10 +2,15 @@
 @import "partials/colors";
 
 // Fonts
+@font-face {
+  font-family: 'California Street';
+  src: url('../fonts/california_street.ttf') format('truetype');
+}
 
 $sans-serif: 'Open Sans', sans-serif;
 $serif: Merriweather, Georgia, 'Times New Roman', serif;
 $accent-font: 'Nunito', sans-serif;
+$california-street-font: 'California Street', sans-serif;
 
 // Weights
 
