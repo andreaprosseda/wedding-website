@@ -242,7 +242,7 @@ Navigation
   position: absolute;
   height: 26px;
   right: 10px;
-  top: 48px;
+  top: 34px;
   visibility: hidden;
   transition: all 300ms ease-in-out;
 }
@@ -305,7 +305,7 @@ Hero
   width: 100%;
 }
 header {
-  padding: 50px 0;
+  padding: 35px 0;
   border-bottom: solid 1px rgba(255, 255, 255, 0.2);
   position: relative;
   width: 1170px;
@@ -339,7 +339,7 @@ header {
         padding-right: 25px;
 
         &:hover {
-          color: $accent-color;
+          color: $accent-color-hover;
         }
       }
       &:last-child a {
@@ -366,7 +366,7 @@ header {
   .member-actions {
     position: absolute;
     right: 0;
-    top: 41px;
+    top: 26px;
     transition: all 300ms ease-in-out;
   }
 }
@@ -582,82 +582,6 @@ Features-stack
 }
 
 /* ==========================================================================
-.blog
-========================================================================== */
-.blog {
-  padding-bottom: 120px;
-
-  img {
-    width: 100%;
-    height: auto;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-  }
-  h2 {
-    font-size: $blog-post-title;
-    color: $txt-accent;
-    font-weight: $semibold;
-    text-transform: uppercase;
-    margin-top: 35px;
-  }
-  .btn {
-    margin-top: 20px;
-  }
-  .blog-img-wrap {
-    position: relative;
-    overflow: hidden;
-
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgba($white-color, 0.5);
-      -moz-transition: all 300ms ease-in-out;
-      -o-transition: all 300ms ease-in-out;
-      -webkit-transition: all 300ms ease-in-out;
-      transition: all 300ms ease-in-out;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-      filter: alpha(opacity=0);
-      opacity: 0;
-    }
-    i {
-      color: $white-color;
-      font-size: 20px;
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      top: 25px;
-      right: 35px;
-    }
-  }
-  .blog-img-wrap:hover img, .blog-img-wrap:focus img {
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-  .blog-img-wrap:hover .overlay, .blog-img-wrap:focus .overlay {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
-    filter: alpha(opacity=1);
-    opacity: 1;
-    z-index: 9;
-  }
-  figcaption i {
-    margin-left: 5px;
-    font-size: 15px;
-  }
-  figcaption a.blog-post-title {
-    color: $txt-primary;
-  }
-  figcaption a.blog-post-title:hover, figcaption a.blog-post-title:focus {
-    color: $txt-secondary;
-  }
-}
-
-/* ==========================================================================
 Instagram
 ========================================================================== */
 #instagram {
@@ -667,7 +591,7 @@ Instagram
 }
 
 /* ==========================================================================
-Engagement Pics
+Pics
 ========================================================================== */
 #eng-pics {
   img {
