@@ -1,12 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="it"> <!--<![endif]-->
+<html class="no-js" lang="it">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -23,76 +16,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-16x16.png">
     <link rel="manifest" href="../manifest.json">
     <link rel="mask-icon" href="../icon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <style>
-        .swiper {
-            width: 100%;
-            height: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            margin-bottom: 70px;
-        }
-        
-        .swiper-slide {
-          text-align: center;
-          font-size: 18px;
-          background: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            /*height: auto; /* Mantieni l'aspetto dell'immagine */
-        }
-  
-      .autoplay-progress {
-        position: absolute;
-        right: 16px;
-        bottom: 16px;
-        z-index: 10;
-        width: 48px;
-        height: 48px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: #993366;
-      }
-  
-      .autoplay-progress svg {
-        --progress: 0;
-        position: absolute;
-        left: 0;
-        top: 0px;
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        stroke-width: 4px;
-        stroke: #993366;
-        fill: none;
-        stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
-        stroke-dasharray: 125.6;
-        transform: rotate(-90deg);
-      }
-
-      .swiper-button-next {
-        color: #993366;
-      }
-
-      .swiper-button-prev {
-        color: #993366;
-      }
-
-      .swiper-pagination-bullet-active {
-        background-color: #993366 !important; 
-      }
-
-      </style>
+      
     <script>
         // load css files from CDN if local node_modules fail
         function loadCssFromCDN(css) {
@@ -121,11 +45,9 @@
 
     <link rel="stylesheet" href="../css/normalize.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jquery.fancybox.css">
     <link rel="stylesheet" href="../css/flexslider.css">
     <link rel="stylesheet" href="../css/styles.min.css">
     <link rel="stylesheet" href="../css/queries.css">
-    <link rel="stylesheet" href="../css/quotes.css">
     <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
     <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
     <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
@@ -172,12 +94,84 @@
     </div>
 </section>
 
-<section id="travel" class="section-padding">
+<section class="rsvp text-center section-padding" id="rsvp">
+
+    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Thank you!</h3>
+                        <p>We are glad to see you join us on our big day.</p>
+                        <div id="add-to-cal"></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>Conferma la partecipazione</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</p>
+            <div class="col-md-6 col-md-offset-3">
+                <h3>Conferma la tua partecipazione</h3>
+                <p>Conferma la tua presenza specificando il numero preciso. Metteremo a disposizione degli autobus per il trasferimento da/verso la Villa. <br/>Vi saremmo molto grati se poteste confermare entro il 10 Maggio 2025</p>
+                <form id="rsvp-form" class="rsvp-form"
+                      action=""
+                      method="POST">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i>
+                                <input name="name" class="" placeholder="Nome e Cognome" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-users"></i>
+                                <input type="number" name="extras" class="" min="0" max="5" placeholder="Numero di partecipanti" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-bus"></i>
+                                <!-- <input type="number" name="extras" class="" placeholder="Autobus" required> -->
+                                <select class="form-control" id="bus-selection" required>
+                                  <option>Andata e Ritorno</option>
+                                  <option>Solo Andata</option>
+                                  <option>Solo Ritorno</option>
+                                  <option>No Grazie</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-clock-o"></i>
+                                <select class="form-control" id="bus-hour" required>
+                                    <option>Autobus delle 02:00</option>
+                                    <option>Autobus delle 00:30</option>
+                                    <option>Nessun Autobus</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <br/><p>Indica eventuali preferenze alimentari, allergie o ulteriori note aggiuntive</p>
+                        <div class="col-md-12 col-sm-12">
+                            <textarea name="extras" class="form-input-group" 
+                            placeholder="Sono vegetariano e mia moglie è celiaca. Mio figlio Marco è intollerante al lattosio. Prenderemo l'autobus soltanto al ritorno"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button class="btn-fill rsvp-btn">
+                        Conferma
+                    </button>
+                </form>
             </div>
         </div>
     </div>
@@ -188,17 +182,15 @@
         <div class="row">
             <div class="col-sm-12 text-center content">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
-                <p>Managed by Andrea with lots of <span class="fa fa-heart pulse2"></span> for you</p>
+                <p>Managed by Andrea with lots of <span class="fa fa-heart pulse2"></span></p>
             </div>
         </div>
     </div>
 </footer>
 <script src="../js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
 <script src="../node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
-<script src="../js/jquery.fancybox.pack.js"></script>
 <script src="../js/vendor/bootstrap.min.js"></script>
 <script src="../js/jquery.flexslider-min.js"></script>
-<script src="../js/jquery.mb.YTPlayer.min.js"></script>
 <script src="../js/vendor/ouical.js"></script>
 <script src="../js/scripts.min.js"></script>
 </body>
