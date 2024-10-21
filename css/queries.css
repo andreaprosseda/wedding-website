@@ -293,7 +293,7 @@
 
 @media screen and (max-width: 480px) {
     .hero .hero-content {
-        padding-top: 110%;
+        padding-top: 75%;
     }
     
     .hero .hero-content img {

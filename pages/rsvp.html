@@ -45,6 +45,7 @@
 
     <link rel="stylesheet" href="../css/normalize.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery.fancybox.css">
     <link rel="stylesheet" href="../css/flexslider.css">
     <link rel="stylesheet" href="../css/styles.min.css">
     <link rel="stylesheet" href="../css/queries.css">
@@ -103,9 +104,8 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
+                        <h3>Grazie!</h3>
+                        <p>Non vediamo l'ora di vederti il giorno del matrimonio!</p>
                     </div>
                 </div>
             </div><!-- /.modal-content -->
@@ -124,13 +124,13 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i>
-                                <input name="name" class="" placeholder="Nome e Cognome" required>
+                                <input name="Nome" class="" placeholder="Nome e Cognome" required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-users"></i>
-                                <input type="number" name="extras" class="" min="0" max="5" placeholder="Numero di partecipanti" required>
+                                <input type="number" name="Partecipanti" class="" min="0" max="5" placeholder="Numero di partecipanti" required>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                             <div class="form-input-group">
                                 <i class="fa fa-bus"></i>
                                 <!-- <input type="number" name="extras" class="" placeholder="Autobus" required> -->
-                                <select class="form-control" id="bus-selection" required>
+                                <select name="Autobus" class="form-control" id="bus-selection" required>
                                   <option>Andata e Ritorno</option>
                                   <option>Solo Andata</option>
                                   <option>Solo Ritorno</option>
@@ -150,7 +150,7 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-clock-o"></i>
-                                <select class="form-control" id="bus-hour" required>
+                                <select name="Orario di Rientro" class="form-control" id="bus-hour" required>
                                     <option>Autobus delle 02:00</option>
                                     <option>Autobus delle 00:30</option>
                                     <option>Nessun Autobus</option>
@@ -161,14 +161,14 @@
                     <div class="row">
                         <br/><p>Indica eventuali preferenze alimentari, allergie o ulteriori note aggiuntive</p>
                         <div class="col-md-12 col-sm-12">
-                            <textarea name="extras" class="form-input-group" 
+                            <textarea name="Note" class="form-input-group" 
                             placeholder="Sono vegetariano e mia moglie è celiaca. Mio figlio Marco è intollerante al lattosio. Prenderemo l'autobus soltanto al ritorno"></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12" id="alert-wrapper"></div>
                     </div>
-                    <button class="btn-fill rsvp-btn">
+                    <button class="btn-fill rsvp-btn" type="submit" value="submit">
                         Conferma
                     </button>
                 </form>
@@ -189,8 +189,10 @@
 </footer>
 <script src="../js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
 <script src="../node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
+<script src="../js/jquery.fancybox.pack.js"></script>
 <script src="../js/vendor/bootstrap.min.js"></script>
 <script src="../js/jquery.flexslider-min.js"></script>
+<script src="../js/jquery.mb.YTPlayer.min.js"></script>
 <script src="../js/vendor/ouical.js"></script>
 <script src="../js/scripts.min.js"></script>
 </body>
