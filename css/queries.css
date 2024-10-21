@@ -364,3 +364,32 @@
         padding-top: 20px;
     }
 }
+
+
+@media screen and (max-width: 640px) {
+    .timeline:before {
+        left: 50px;
+    }
+
+    .entry .body {
+        width: 90%;
+        padding-left: 15px;
+    }
+
+    .entry .title {
+        width: 90%;
+        text-align: left;
+        padding-left: 40px;
+    }
+
+    .entry .title::before {
+        left: -6px;
+        right: auto;
+        top: 8.5%;
+    }
+
+    .entry .title p, .entry .body p {
+        padding-bottom: 5px;
+    }
+
+}
