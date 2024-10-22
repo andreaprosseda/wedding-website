@@ -747,6 +747,9 @@ footer {
     background: #fff;
   }
   .to-top-wrapper .to-top {
+    z-index: 9999999;
+    position: relative;
+    margin: 0 0;
     display: block;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -754,9 +757,7 @@ footer {
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
   }
-  .to-top-wrapper .to-top:hover {
-    margin-top: -5px;
-  }
+  
   span.fa-heart {
     color: #ff415c;
     font-size: 18px;
