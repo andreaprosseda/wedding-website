@@ -2,15 +2,35 @@
 @import "partials/colors";
 
 // Fonts
+
+@font-face {
+  font-family: 'Artilla';
+  src: url('../fonts/new/Artilla.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Backstreet';
+  src: url('../fonts/new/Backstreet.ttf') format('truetype');
+}
+
 @font-face {
   font-family: 'California Street';
-  src: url('../fonts/california_street.ttf') format('truetype');
+  src: url('../fonts/new/california_street.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Romate Hood';
+    src: url('../fonts/new/Romate Hood OTF.otf') format('truetype');
 }
 
 $sans-serif: 'Open Sans', sans-serif;
 $serif: Merriweather, Georgia, 'Times New Roman', serif;
 $accent-font: 'Nunito', sans-serif;
+
 $california-street-font: 'California Street', sans-serif;
+$artilla: 'Artilla', sans-serif;
+$backstreet: 'Backstreet', sans-serif;
+$romate-hood: 'Romate Hood', sans-serif;
 
 // Weights
 

@@ -1,4 +1,16 @@
 @media screen and (min-width: 991px) {
+    
+    .highlight {
+        margin-left: -25%;
+        margin-right: -25%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    
+    .hero .hero-content {
+        padding-top: 30%;
+    }
+
     header {
         width: 90%;
         margin: 0 auto;
@@ -16,6 +28,10 @@
 
 /* Responsive nav kicks in */
 @media screen and (max-width: 991px) {
+    
+    .hero .hero-content {
+        padding-top: 35%;
+    }
 
     header {
         width: 90%;
@@ -26,10 +42,6 @@
         margin: 0;
     }
 
-    .hero .hero-content {
-        padding-top: 50%;
-    }
-
     .header-nav {
         position: fixed;
         background-color: #000;
@@ -38,7 +50,7 @@
         top: 0;
         left: 0;
         z-index: 99999;
-        visibility: hidden;
+        visibility:     dden;
         opacity: 0;
         -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
         transition: opacity 0.5s, visibility 0s 0.5s;
@@ -255,8 +267,13 @@
 }
 
 @media screen and (max-width: 640px) {
+    .hero-content h1 {
+        margin-left: -25%;
+        margin-right: -25%;
+    }
+
     .hero .hero-content {
-        padding-top: 100%;
+        padding-top: 50%;
     }
 
     #eng-pics .img-wrap i {
@@ -294,6 +311,16 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    .hero-content h1 {
+        margin-left: -27%;
+        margin-right: -27%;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }    
+    
     .hero .hero-content {
         padding-top: 75%;
     }
@@ -359,7 +386,7 @@
 
 @media screen and (max-width: 320px) {
     .hero .hero-content {
-        padding-top: 130%;
+        padding-top: 100%;
     }
 
     .rsvp {
