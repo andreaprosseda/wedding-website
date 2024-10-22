@@ -4,6 +4,7 @@
   "description": "A wedding website with loads of features.",
   "main": "npmfile.js",
   "scripts": {
+    "start": "gulp | live-server --port=9003",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
