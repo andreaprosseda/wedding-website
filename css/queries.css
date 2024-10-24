@@ -350,9 +350,13 @@
     }    
     
     .hero .hero-content {
-        padding-top: 75%;
+        padding-top: 90%;
     }
     
+    .hero .highlight {
+        font-size: 90px !important;
+    }
+
     .hero .hero-content img {
         width: 65%;
     }
