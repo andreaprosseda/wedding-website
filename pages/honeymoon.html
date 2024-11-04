@@ -343,7 +343,7 @@
     var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
-        slidesPerView: 4,
+        slidesPerView: 2,
         coverflowEffect: {
             rotate: 50,
             stretch: 0,
@@ -364,6 +364,12 @@
         navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+            1500: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+              },
         },
         on: {
         autoplayTimeLeft(s, time, progress) {
