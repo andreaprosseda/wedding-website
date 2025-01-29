@@ -888,6 +888,7 @@ $dot-diameter: 8px;
     width: 66%;
     padding-left: $gutter;
     p {
+      padding-bottom: 0;
       line-height: 1.4em;
       &:first-child {
         margin-top: 0;
