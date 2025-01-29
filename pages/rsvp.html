@@ -117,7 +117,7 @@
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>Conferma la tua partecipazione</h3>
-                <p>Conferma la tua presenza specificando il numero preciso. Metteremo a disposizione degli autobus per il trasferimento da/verso la Villa. <br/>Vi saremmo molto grati se poteste confermare entro il 10 Maggio 2025</p>
+                <p>Conferma la tua presenza indicando in quanti sarete presenti.<br/>Metteremo a disposizione degli autobus per il trasferimento da/verso la Villa. <br/>Vi saremmo grati se poteste confermare entro il 1 Maggio 2025!</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
@@ -125,13 +125,13 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i>
-                                <input name="Nome" class="" placeholder="Nome e Cognome" required>
+                                <input name="Nome" class="" placeholder="Nome e Cognome">
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-users"></i>
-                                <input type="number" name="Partecipanti" class="" min="0" max="5" placeholder="Numero di partecipanti" required>
+                                <input type="number" name="Invitati" class="" min="1" max="10" placeholder="Numero di Invitati">
                             </div>
                         </div>
                     </div>
@@ -139,31 +139,32 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-bus"></i>
-                                <!-- <input type="number" name="extras" class="" placeholder="Autobus" required> -->
-                                <select name="Autobus" class="form-control" id="bus-selection" required>
-                                  <option>Andata e Ritorno</option>
-                                  <option>Solo Andata</option>
-                                  <option>Solo Ritorno</option>
-                                  <option>No Grazie</option>
+                                <!-- <input type="number" name="extras" class="" placeholder="Autobus"> -->
+                                <select name="Autobus" class="form-control" id="bus-selection">
+                                    <option>Seleziona Autobus</option>
+                                    <option>Andata e Ritorno</option>
+                                    <option>Solo Andata</option>
+                                    <option>Solo Ritorno</option>
+                                    <option>Nessun Bus</option>
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-clock-o"></i>
-                                <select name="Orario di Rientro" class="form-control" id="bus-hour" required>
-                                    <option>Autobus delle 02:00</option>
-                                    <option>Autobus delle 00:30</option>
-                                    <option>Nessun Autobus</option>
+                                <select name="Orario" class="form-control" id="bus-hour">
+                                    <option>Seleziona orario di ritorno</option>
+                                    <option>Ritorno dopo la torta</option>
+                                    <option>Ritorno alla fine del party</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <br/><p>Indica eventuali preferenze alimentari, allergie o ulteriori note aggiuntive</p>
+                        <br/><p>Facci sapere se sei celiaco, vegano, vegetariano o se hai eventuali intolleranze e/o allergie alimentari</p>
                         <div class="col-md-12 col-sm-12">
                             <textarea name="Note" class="form-input-group" 
-                            placeholder="Sono vegetariano e mia moglie è celiaca. Mio figlio Marco è intollerante al lattosio. Prenderemo l'autobus soltanto al ritorno"></textarea>
+                            placeholder="Sono vegetariano e mia moglie è celiaca. Mia figlia Anna è intollerante al lattosio, mio figlio Marco non mangia il pesce"></textarea>
                         </div>
                     </div>
                     <div class="row">
