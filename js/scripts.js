@@ -131,7 +131,33 @@ $(document).ready(function () {
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
-
+        console.log(data)
+        var params = new URLSearchParams(data);
+        var name = params.get('Nome');
+        var participants = params.get('Invitati');
+        var bus = params.get('Autobus');
+        var hour = params.get('Orario');
+    
+        if (!name || name.split(' ').filter(Boolean).length < 2) {
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Attenzione!</strong> Assicurati di aver inserito sia Nome che Cognome.'));
+            return;
+        }
+        
+        if (!participants || participants < 1 || participants > 10) {
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Attenzione!</strong> Assicurati di aver inserito un numero di invitati corretto.'));
+            return;
+        }
+    
+        if (bus && bus.includes('Seleziona')) {
+            $('#alert-wrapper').html(alert_markup('danger', "<strong>Attenzione!</strong> Seleziona un'opzione valida per l'autobus."));
+            return;
+        }
+    
+        if (bus.includes('Ritorno') && hour.includes('Seleziona')) {
+            $('#alert-wrapper').html(alert_markup('danger', "<strong>Attenzione!</strong> Seleziona un orario di rientro valido per l'autobus."));
+            return;
+        }    
+    
         $('#alert-wrapper').html(alert_markup('info', '<strong>Solo un attimo!</strong> Stiamo salvando le informazioni.'));
 
         $.post('https://script.google.com/macros/s/AKfycbyknE4pgMI4pI23TQ4Y_j4DisdWa8fipK3p2eEGDK1bl7a-zfSdrR_TrdW9lccFwCwNtg/exec', data)
