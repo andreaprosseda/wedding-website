@@ -176,6 +176,11 @@ $(document).ready(function () {
             });
     });
 
+
+    $('#close-rsvp-alert').click(function () {
+        window.location.href = '/index.html';
+    });
+
 });
 
 /********************** Extras **********************/
