@@ -160,7 +160,7 @@ $(document).ready(function () {
     
         $('#alert-wrapper').html(alert_markup('info', '<strong>Solo un attimo!</strong> Stiamo salvando le informazioni.'));
 
-        $.post('https://script.google.com/macros/s/AKfycbyknE4pgMI4pI23TQ4Y_j4DisdWa8fipK3p2eEGDK1bl7a-zfSdrR_TrdW9lccFwCwNtg/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbxjVq1h-vx6gf_U7L7U8GF6AfQDKA4egHT3bmgg9Q-5NfBQK1na6hL-PT9GnyR2HrEqLg/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
